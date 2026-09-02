@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Official Formula 1 Drivers roster, profiles, team details, and racing facts powered by OpenF1 live data." />
+    <title>F1 Drivers - BorkatRace</title>
+    <link rel="stylesheet" href="../CSS/style-one.css" />
+    <link rel="stylesheet" href="../CSS/style-second.css" />
+    <link rel="stylesheet" href="../CSS/style-responsive.css" />
+  </head>
+  <body class="body-driver">
+    <header>
+      <nav id="navbar">
+        <ul class="side">
+          <li>
+            <a href="#" aria-label="Close menu"><img src="../IMG/close-putih.svg" alt="tutup" /></a>
+          </li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="driver.html">Driver</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        <ul>
+          <li class="fact-inside">
+            <a href="../index.html"><img class="logo-f1" src="../IMG/f1_75-removebg-preview.png" alt="F1 Logo" /></a>
+          </li>
+          <li class="hide-on-mobile"><a href="../index.html">Home</a></li>
+          <li class="hide-on-mobile"><a href="driver.html">Driver</a></li>
+          <li class="hide-on-mobile"><a href="news.html">News</a></li>
+          <li class="hide-on-mobile"><a href="about.html">About</a></li>
+          <li class="hide-on-mobile"><a href="login.html">Login</a></li>
+          <li class="daftar-menu">
+            <a href="#" aria-label="Open menu"><img src="../IMG/menu-putih.svg" alt="menu" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section & Driver Grid -->
+      <section class="driver-hero-section">
+        <div class="driver-hero-overlay">
+          <div class="driver-header-title">
+            <h1 class="main-page-title">Formula 1 Official Drivers</h1>
+            <p class="subtitle-page">Live driver lineup, team allocations, and real-time telemetry profiles via OpenF1 API</p>
+          </div>
+
+          <!-- Driver Cards Grid Container -->
+          <div class="drivers-container">
+            <div id="loading-spinner" class="loading-state">
+              <div class="spinner"></div>
+              <p>Mengambil data pembalap terbaru dari OpenF1...</p>
+            </div>
+            <div id="drivers-grid" class="drivers-grid" style="display: none;"></div>
+          </div>
+
+          <!-- Legacy / Table view for compatibility -->
+          <div class="cover-table" id="table-wrapper" style="display: none;">
+            <table class="driver-table">
+              <thead class="table-head"></thead>
+              <tbody class="table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facts Section with Valid W3C Semantics -->
+      <article class="fact-article">
+        <header>
+          <h2 class="judul-fact">Some Facts About Formula One Drivers</h2>
+        </header>
+        <section class="fact">
+          <div class="fact-first">
+            <div class="fact-category">
+              <h3>General Facts About F1 Drivers</h3>
+              <ul>
+                <li class="fact-inside">Extreme Physical Training – F1 drivers have fitness levels comparable to elite athletes. They need neck muscles strong enough to withstand up to 5G of lateral force during cornering.</li>
+                <li class="fact-inside">Weight Loss During Races – Drivers can lose 2–4 kg of body weight in a single race due to intense dehydration and extreme cockpit temperatures.</li>
+                <li class="fact-inside">Superhuman Reflexes – F1 drivers possess reaction times of just 0.15–0.20 seconds, outperforming typical human response rates.</li>
+              </ul>
+            </div>
+
+            <div class="fact-category">
+              <h3>Records & Achievements</h3>
+              <ul>
+                <li class="fact-inside">Youngest World Champion – Sebastian Vettel (23 years, 134 days in 2010), later matched in historic milestones by Max Verstappen.</li>
+                <li class="fact-inside">Oldest Race Winner – Luigi Fagioli won the 1951 French GP at 53 years old.</li>
+                <li class="fact-inside">Most Race Wins – Lewis Hamilton holds the all-time record for most wins in Formula 1 history.</li>
+                <li class="fact-inside">Most Pole Positions – Lewis Hamilton also holds the record for most career pole positions.</li>
+              </ul>
+            </div>
+
+            <div class="fact-category">
+              <h3>Unique Driver Traits & Legends</h3>
+              <ul>
+                <li class="fact-inside">Ayrton Senna’s Rituals – Senna always carried a Brazilian flag and read passages from the Bible before entering qualifying sessions.</li>
+                <li class="fact-inside">Kimi Räikkönen’s Iconic Messages – Known for legendary, no-nonsense team radio lines like “Leave me alone, I know what I’m doing!”.</li>
+                <li class="fact-inside">Daniel Ricciardo’s “Shoey” – Iconic celebration of drinking podium champagne straight out of his race boot.</li>
+              </ul>
+            </div>
+
+            <div class="fact-category">
+              <h3>Safety, Engineering & Risks</h3>
+              <ul>
+                <li class="fact-inside">Heart Rate In-Cockpit – A driver’s heart rate regularly averages 160–200 BPM across an entire 90-minute Grand Prix.</li>
+                <li class="fact-inside">Halo Device Revolution – Modern F1 safety is at an all-time peak thanks to the titanium Halo cockpit protection structure.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer-element">
+      <p>&copy; 2003-2025 Formula One World Championship Limited. All rights reserved.</p>
+    </footer>
+
+    <script src="../JS/index.js"></script>
+    <script src="../JS/index-2.js"></script>
+  </body>
+</html>

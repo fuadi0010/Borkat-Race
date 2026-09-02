@@ -1,0 +1,196 @@
+/* HALAMAN UTAMA */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #cccccc;
+}
+/* navigation */
+.logo-f1 {
+  height: 20vh;
+  width: 20vw;
+}
+nav {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: fixed;
+  width: 100vw;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0);
+  z-index: 999;
+  transition: top 0.3s;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 8vh;
+  font-size: 5rem;
+}
+nav ul li a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(43, 174, 255);
+  border-bottom: solid;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+/* side */
+.side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #ffffff00;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10 px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.side li {
+  width: 100%;
+}
+.side a {
+  width: 100%;
+  
+}
+.daftar-menu {
+  display: none;
+}
+/* navigation end*/
+/* background pertama */
+.opening .opening2 .opening3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background: url("../IMG/backgroundmain.jpg") no-repeat;
+  min-height: 100vh;
+  min-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.opening .opening2 .opening3 .opening4 {
+  text-align: center;
+  max-width: 70rem;
+}
+.opening .opening2 .opening3 .paragraf-pertama {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  line-height: 1.8em;
+  color: #ffffff;
+  padding: 1rem 0;
+}
+.opening .opening2 .opening3 .judul-atas {
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition-delay: 0.2s;
+}
+/* background pertama */
+/* video pada halaman utama*/
+.video .video1 {
+  background-color: rgb(15, 24, 24);
+  min-width: 80vw;
+}
+/* video */
+.video .video1 video {
+  position: relative;
+  left: 15vw;
+  top: 5vh;
+  width: 70vw;
+  height: 60vh;
+  z-index: 1;
+}
+/* video */
+/* judul pinacle */
+.video .video1 .judul-bawah {
+  position: relative;
+  top: 10vh;
+  display: flex;
+  padding-left: 13vw;
+  font-size: 4.5rem;
+  color: #f5f5f5;
+}
+/* judul pinacle */
+.video .video1 .foto img {
+  position: relative;
+  left: 20vw;
+  height: 60vh;
+  width: 60vw;
+  top: 15vh;
+}
+/* paragraf pertama */
+.video .video1 .pertama {
+  position: relative;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 20vh;
+  line-height: 5vh;
+  text-align: justify;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+}
+/* paragraf pertama */
+/* paragraf kedua */
+.video .video1 .kedua {
+  position: relative;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 5vh;
+  text-indent: 1.5rem;
+  line-height: 5vh;
+  text-align: justify;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+}
+/* paragraf kedua */
+/* paragraf ketiga */
+.video .video1 .ketiga {
+  position: relative;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  text-indent: 1.5rem;
+  line-height: 5vh;
+  text-align: justify;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+}
+/* paragraf ketiga */
+/* image end */
+.footer-element {
+  background-color: rgb(24, 38, 38);
+}
+.footer-element p {
+  font-size: 1.5rem;
+  height: 5vh;
+  text-align: center;
+  vertical-align: middle;
+}
+/* footer end */

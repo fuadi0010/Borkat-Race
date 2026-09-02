@@ -9,33 +9,45 @@
     <link rel="stylesheet" href="CSS/style-responsive.css">
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <ul class="side">
-          <li>
-            <a href="#" aria-label="Close menu"><img src="IMG/close-putih.svg" alt="tutup" /></a>
-          </li>
+    <!-- Site Header with Decoupled Mobile Sidebar -->
+    <header class="site-header">
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo" aria-label="BorkatRace Home">
+            <img class="logo-f1" src="IMG/f1_75-removebg-preview.png" alt="F1 Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="HTML/driver.html">Driver</a></li>
+            <li><a href="HTML/news.html">News</a></li>
+            <li><a href="HTML/about.html">About</a></li>
+            <li><a href="HTML/login.html">Login</a></li>
+          </ul>
+          <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+            <img src="IMG/menu-putih.svg" alt="Menu" />
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Sidebar Drawer (Closed by Default) -->
+      <aside class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+          <span class="sidebar-title">Menu</span>
+          <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close mobile menu">
+            <img src="IMG/close-putih.svg" alt="Tutup" />
+          </button>
+        </div>
+        <ul class="sidebar-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="HTML/driver.html">Driver</a></li>
           <li><a href="HTML/news.html">News</a></li>
           <li><a href="HTML/about.html">About</a></li>
           <li><a href="HTML/login.html">Login</a></li>
         </ul>
-        <ul>
-          <li>
-            <a href="index.html"><img class="logo-f1" src="IMG/f1_75-removebg-preview.png" alt="F1 Logo" /></a>
-          </li>
-          <li class="hide-on-mobile"><a href="index.html">Home</a></li>
-          <li class="hide-on-mobile"><a href="HTML/driver.html">Driver</a></li>
-          <li class="hide-on-mobile"><a href="HTML/news.html">News</a></li>
-          <li class="hide-on-mobile"><a href="HTML/about.html">About</a></li>
-          <li class="hide-on-mobile"><a href="HTML/login.html">Login</a></li>
-          <li class="daftar-menu">
-            <a href="#" aria-label="Open menu"><img src="IMG/menu-putih.svg" alt="menu" /></a>
-          </li>
-        </ul>
-      </nav>
+      </aside>
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
     </header>
+
     <main>
       <section class="opening">
         <div class="opening2">
@@ -50,6 +62,7 @@
           </div>
         </div>
       </section>
+
       <section class="video">
         <div class="video1">
           <h2 class="judul-bawah">Formula One The Pinnacle Of Motorsport</h2>
@@ -78,9 +91,11 @@
         </div>
       </section>
     </main>
+
     <footer class="footer-element">
       <p>&copy; 2003-2025 Formula One World Championship Limited. All rights reserved.</p>
     </footer>
+
     <script src="JS/index.js"></script>
   </body>
 </html>

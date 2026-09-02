@@ -1,118 +1,186 @@
-/* HALAMAN ABOUT */
+/* ===================================================
+   BORKATRACE - ABOUT & FEEDBACK PAGE STYLING
+   =================================================== */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* background */
-.about-satu .about-dua {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  background: url("../IMG/background-about.jpg") no-repeat;
+.about-satu {
+  position: relative;
   min-height: 100vh;
+  background: linear-gradient(180deg, rgba(11, 17, 20, 0.8) 0%, rgba(11, 17, 20, 0.94) 100%),
+              url("../IMG/background-about.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: calc(var(--nav-height, 70px) + 3rem) 1.5rem 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-satu-container {
+  width: 100%;
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Left Column: About Story */
+.about-dua {
   display: flex;
   flex-direction: column;
+}
+
+.about-dua h1 {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.about-dua h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--f1-red, #e10600);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.paragraf-about p {
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary, #cbd5e1);
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.contact-card {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background-size: cover !important;
-  background-position: center !important;
+  gap: 12px;
+  background: rgba(23, 36, 44, 0.7);
+  border: 1px solid var(--f1-border, rgba(255, 255, 255, 0.1));
+  padding: 12px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  width: fit-content;
 }
-/* background */
-/* isi  */
-.about-satu .about-dua p {
-  color: #f5f5f5;
-  padding-left: 20vw;
-  padding-right: 20vw;
-  font-size: 2.4rem;
+
+.contact-card .contact-icon {
+  font-size: 1.3rem;
 }
-.about-satu .about-dua h2 {
-  padding-right: 20vw;
-  padding-left: 20vw;
-  color: aliceblue;
-  font-size: 4rem;
+
+.contact-card .contact-text {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
 }
-/* isi  */
-/* nomor contact */
-.about-satu .about-dua .contact {
-  color: #f5f5f5;
-  position: relative;
-  top: 10vh;
-  font-family: Arial, Helvetica, sans-serif;
+
+/* Right Column: Feedback Glassmorphic Card */
+.kritik-saran {
+  width: 100%;
 }
-/* nomor contact */
-/* kritik dan saran */
-.about-satu .kritik-saran {
-  height: 100vh;
+
+.kritik-saran1 {
+  background: rgba(18, 26, 32, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 2.5rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
-.about-satu .kritik-saran .kritik-saran1 {
-  border: solid;
-  border-radius: 15px;
-  height: 60vh;
-  width: 30%;
-  position: relative;
-  top: 20vh;
-  left: 35vw;
-}
-.about-satu .kritik-saran .text-area {
-  position: relative;
-  padding-top: 1vh;
-  padding-left: 1vw;
-  top: 13vh;
-  width: 25vw;
-  height: 20vh;
-  left: 2.5vw;
-  resize: none;
-  overflow: hidden;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  background: transparent;
-  backdrop-filter: blur(10px);
-  color: #f5f5f5;
-}
-.about-satu .kritik-saran .type-pertama {
-  position: relative;
-  top: 5vh;
-  left: 7.5vw;
-  padding-left: 1vw;
-  margin-bottom: 2vh;
-  width: 15vw;
-  height: 5vh;
-  text-align: left;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  background: transparent;
-  backdrop-filter: blur(10px);
-  color: #f5f5f5;
-}
-.kritik-saran .kritik-saran1 input::placeholder {
-  color: #f5f5f5;
-}
-.kritik-saran .kritik-saran1 textarea::placeholder {
-  color: #f5f5f5;
-}
-.kritik-saran .kritik-saran1 h2 {
-  position: relative;
-  left: 20vw;
-  font-size: 3rem;
-  color: #f5f5f5;
-}
-.about-satu .kritik-saran button {
-  position: relative;
-  width: 5vw;
-  height: 3vh;
-  top: 14vh;
+
+.kritik-saran1 form {
   display: flex;
-  text-align: center;
-  justify-self: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.kritik-saran1 h2 {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
   text-align: left;
-  font-size: 1.2rem;
-  color: #f5f5f5;
-  background: transparent;
-  backdrop-filter: blur(10px);
 }
-.about-satu .kritik-saran {
-  background: url(../IMG/background-about.jpg) no-repeat;
+
+.form-group {
+  margin-bottom: 1.2rem;
+  width: 100%;
 }
-/* kritik dan saran */
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted, #94a3b8);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.type-pertama,
+.text-area {
+  width: 100%;
+  background: rgba(11, 17, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.type-pertama:focus,
+.text-area:focus {
+  border-color: var(--f1-red, #e10600);
+  background: rgba(11, 17, 20, 0.85);
+  box-shadow: 0 0 0 3px rgba(225, 6, 0, 0.2);
+}
+
+.type-pertama::placeholder,
+.text-area::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.text-area {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.kritik-saran button {
+  width: 100%;
+  padding: 14px;
+  background: var(--f1-red, #e10600);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 6px 20px rgba(225, 6, 0, 0.35);
+}
+
+.kritik-saran button:hover {
+  background: var(--f1-red-hover, #ff1e19);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(225, 6, 0, 0.5);
+}
+
+.kritik-saran button:active {
+  transform: translateY(0);
+}

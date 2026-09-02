@@ -3,47 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Official Formula 1 Drivers roster, profiles, team details, and racing facts powered by OpenF1 live data." />
-    <title>F1 Drivers - BorkatRace</title>
+    <meta name="description" content="Official Formula 1 Drivers roster, live team radio audio communications, track weather conditions, and racing profiles powered by OpenF1 live data." />
+    <title>F1 Drivers & Live Telemetry Hub - BorkatRace</title>
     <link rel="stylesheet" href="../CSS/style-one.css" />
     <link rel="stylesheet" href="../CSS/style-second.css" />
     <link rel="stylesheet" href="../CSS/style-responsive.css" />
   </head>
   <body class="body-driver">
-    <header>
-      <nav id="navbar">
-        <ul class="side">
-          <li>
-            <a href="#" aria-label="Close menu"><img src="../IMG/close-putih.svg" alt="tutup" /></a>
-          </li>
+    <!-- Site Header with Decoupled Mobile Sidebar -->
+    <header class="site-header">
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="../index.html" class="nav-logo" aria-label="BorkatRace Home">
+            <img class="logo-f1" src="../IMG/f1_75-removebg-preview.png" alt="F1 Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="driver.html">Driver</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+          <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+            <img src="../IMG/menu-putih.svg" alt="Menu" />
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Sidebar Drawer (Closed by Default) -->
+      <aside class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+          <span class="sidebar-title">Menu</span>
+          <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close mobile menu">
+            <img src="../IMG/close-putih.svg" alt="Tutup" />
+          </button>
+        </div>
+        <ul class="sidebar-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="driver.html">Driver</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="login.html">Login</a></li>
         </ul>
-        <ul>
-          <li class="fact-inside">
-            <a href="../index.html"><img class="logo-f1" src="../IMG/f1_75-removebg-preview.png" alt="F1 Logo" /></a>
-          </li>
-          <li class="hide-on-mobile"><a href="../index.html">Home</a></li>
-          <li class="hide-on-mobile"><a href="driver.html">Driver</a></li>
-          <li class="hide-on-mobile"><a href="news.html">News</a></li>
-          <li class="hide-on-mobile"><a href="about.html">About</a></li>
-          <li class="hide-on-mobile"><a href="login.html">Login</a></li>
-          <li class="daftar-menu">
-            <a href="#" aria-label="Open menu"><img src="../IMG/menu-putih.svg" alt="menu" /></a>
-          </li>
-        </ul>
-      </nav>
+      </aside>
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
     </header>
+
     <main>
       <!-- Hero Section & Driver Grid -->
       <section class="driver-hero-section">
         <div class="driver-hero-overlay">
           <div class="driver-header-title">
-            <h1 class="main-page-title">Formula 1 Official Drivers</h1>
-            <p class="subtitle-page">Live driver lineup, team allocations, and real-time telemetry profiles via OpenF1 API</p>
+            <h1 class="main-page-title">Formula 1 Official Lineup</h1>
+            <p class="subtitle-page">Live driver telemetry, official team rosters, real-time circuit weather, and pit radio recordings via OpenF1</p>
+          </div>
+
+          <!-- Live Circuit Weather Status Bar -->
+          <div class="weather-widget-container">
+            <div class="weather-widget-header">
+              <span class="weather-widget-title">🏁 Live Grand Prix Circuit Conditions</span>
+              <span class="weather-live-indicator">LIVE FEED</span>
+            </div>
+            <div id="weather-widget-content" class="weather-grid">
+              <!-- Rendered dynamically by JS -->
+              <div class="weather-loading">Memuat parameter cuaca & aspal sirkuit...</div>
+            </div>
+          </div>
+
+          <!-- Interactive Search & Team Filter Bar -->
+          <div class="driver-controls-bar">
+            <div class="search-box-wrapper">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="driver-search-input" placeholder="Search driver by name, acronym, or #..." aria-label="Search drivers" />
+            </div>
+            <div class="team-filter-scroll">
+              <button class="team-filter-pill is-active" data-team="all">All Teams</button>
+              <button class="team-filter-pill" data-team="Red Bull">Red Bull</button>
+              <button class="team-filter-pill" data-team="Ferrari">Ferrari</button>
+              <button class="team-filter-pill" data-team="McLaren">McLaren</button>
+              <button class="team-filter-pill" data-team="Mercedes">Mercedes</button>
+              <button class="team-filter-pill" data-team="Aston Martin">Aston Martin</button>
+              <button class="team-filter-pill" data-team="Alpine">Alpine</button>
+              <button class="team-filter-pill" data-team="Williams">Williams</button>
+              <button class="team-filter-pill" data-team="Racing Bulls">Racing Bulls</button>
+              <button class="team-filter-pill" data-team="Haas">Haas</button>
+              <button class="team-filter-pill" data-team="Audi">Audi</button>
+              <button class="team-filter-pill" data-team="Cadillac">Cadillac</button>
+            </div>
           </div>
 
           <!-- Driver Cards Grid Container -->
@@ -61,6 +107,20 @@
               <thead class="table-head"></thead>
               <tbody class="table-body"></tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Official Team Radio Hub Section -->
+      <section class="team-radio-section">
+        <div class="team-radio-container">
+          <div class="section-title-wrap">
+            <h2 class="section-title">📻 Official Team Radio Broadcasts</h2>
+            <p class="section-subtitle">Listen to real-time in-car team radio communications between drivers and pit wall engineers</p>
+          </div>
+          <div id="team-radio-grid" class="radio-grid">
+            <!-- Rendered dynamically by JS -->
+            <div class="radio-loading">Mengambil rekaman audio team radio sesi balapan...</div>
           </div>
         </div>
       </section>

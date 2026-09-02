@@ -1,43 +1,86 @@
-// BORKATRACE - GLOBAL NAVIGATION & INTERACTION SCRIPT
+// ===================================================
+// BORKATRACE - GLOBAL NAVIGATION & INTERACTIVITY
+// ===================================================
 
-// Helper functions for opening and closing the mobile sidebar
-function showSidebar() {
-  const side = document.querySelector(".side");
-  if (side) {
-    side.style.display = "flex";
+// Global helper functions for sidebar control
+function openMobileSidebar() {
+  const sidebar = document.getElementById("mobile-sidebar");
+  const backdrop = document.getElementById("sidebar-backdrop");
+  const toggleBtn = document.getElementById("menu-toggle-btn");
+
+  if (sidebar) {
+    sidebar.classList.add("is-open");
+    sidebar.setAttribute("aria-hidden", "false");
   }
+  if (backdrop) {
+    backdrop.classList.add("is-active");
+  }
+  if (toggleBtn) {
+    toggleBtn.setAttribute("aria-expanded", "true");
+  }
+  document.body.classList.add("nav-locked");
 }
 
-function hideSide() {
-  const side = document.querySelector(".side");
-  if (side) {
-    side.style.display = "none";
+function closeMobileSidebar() {
+  const sidebar = document.getElementById("mobile-sidebar");
+  const backdrop = document.getElementById("sidebar-backdrop");
+  const toggleBtn = document.getElementById("menu-toggle-btn");
+
+  if (sidebar) {
+    sidebar.classList.remove("is-open");
+    sidebar.setAttribute("aria-hidden", "true");
   }
+  if (backdrop) {
+    backdrop.classList.remove("is-active");
+  }
+  if (toggleBtn) {
+    toggleBtn.setAttribute("aria-expanded", "false");
+  }
+  document.body.classList.remove("nav-locked");
 }
 
+// Global initialization
 document.addEventListener("DOMContentLoaded", function () {
-  const menuBtn = document.querySelector(".daftar-menu");
-  const closeBtn = document.querySelector(".side li:first-child");
-  const sideNav = document.querySelector(".side");
+  // Ensure sidebar is closed on initial page load
+  closeMobileSidebar();
 
-  if (menuBtn) {
-    menuBtn.addEventListener("click", function (e) {
+  const menuToggle = document.getElementById("menu-toggle-btn");
+  const closeBtn = document.getElementById("sidebar-close-btn");
+  const backdrop = document.getElementById("sidebar-backdrop");
+  const sidebarLinks = document.querySelectorAll(".sidebar-links a");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", function (e) {
       e.preventDefault();
-      showSidebar();
+      e.stopPropagation();
+      openMobileSidebar();
     });
   }
 
   if (closeBtn) {
     closeBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      hideSide();
+      closeMobileSidebar();
     });
   }
 
-  // Close sidebar on Escape key press
+  if (backdrop) {
+    backdrop.addEventListener("click", function () {
+      closeMobileSidebar();
+    });
+  }
+
+  // Close sidebar when any link inside it is clicked
+  sidebarLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      closeMobileSidebar();
+    });
+  });
+
+  // Close on Escape key press
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      hideSide();
+      closeMobileSidebar();
     }
   });
 
@@ -61,12 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
       if (messageInput && !messageInput.value.trim()) {
-        alert("Mohon ketikkan pesan feedback atau saran Anda.");
+        alert("Mohon ketikkan pesan saran atau feedback Anda.");
         messageInput.focus();
         return;
       }
 
-      alert("Terima kasih! Saran & Feedback Anda telah berhasil dikirim.");
+      alert("Terima kasih! Feedback & saran Anda telah berhasil dikirim.");
       feedbackForm.reset();
     });
   }
@@ -76,36 +119,36 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loginForm) {
     loginForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      const email = loginForm.querySelector('input[type="email"]')?.value;
+      const email = loginForm.querySelector('input[type="email"]')?.value || "Pengguna";
       alert(`Selamat datang kembali (${email})! Anda berhasil masuk.`);
       window.location.href = "../index.html";
     });
   }
 });
 
-// Throttled Navbar hide/show on scroll
-let lastScrollTop = 0;
-let isScrolling = false;
+// Throttled Navbar scroll behavior (hide when scrolling down, show when scrolling up)
+let lastScrollY = 0;
+let isTicking = false;
 const navbar = document.getElementById("navbar");
 
 if (navbar) {
   window.addEventListener(
     "scroll",
     function () {
-      if (!isScrolling) {
+      if (!isTicking) {
         window.requestAnimationFrame(function () {
-          const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+          const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-          if (currentScroll > lastScrollTop && currentScroll > 80) {
-            navbar.style.top = "-90px";
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            navbar.classList.add("navbar-hidden");
           } else {
-            navbar.style.top = "0";
+            navbar.classList.remove("navbar-hidden");
           }
 
-          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-          isScrolling = false;
+          lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+          isTicking = false;
         });
-        isScrolling = true;
+        isTicking = true;
       }
     },
     { passive: true }

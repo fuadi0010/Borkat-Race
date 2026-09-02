@@ -10,61 +10,92 @@
     <link rel="stylesheet" href="../CSS/style-responsive.css" />
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <ul class="side">
-          <li>
-            <a href="#" aria-label="Close menu"><img src="../IMG/close-putih.svg" alt="tutup" /></a>
-          </li>
+    <!-- Site Header with Decoupled Mobile Sidebar -->
+    <header class="site-header">
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="../index.html" class="nav-logo" aria-label="BorkatRace Home">
+            <img class="logo-f1" src="../IMG/f1_75-removebg-preview.png" alt="F1 Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="driver.html">Driver</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+          <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+            <img src="../IMG/menu-putih.svg" alt="Menu" />
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Sidebar Drawer (Closed by Default) -->
+      <aside class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+          <span class="sidebar-title">Menu</span>
+          <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close mobile menu">
+            <img src="../IMG/close-putih.svg" alt="Tutup" />
+          </button>
+        </div>
+        <ul class="sidebar-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="driver.html">Driver</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="login.html">Login</a></li>
         </ul>
-        <ul>
-          <li>
-            <a href="../index.html"><img class="logo-f1" src="../IMG/f1_75-removebg-preview.png" alt="F1 Logo" /></a>
-          </li>
-          <li class="hide-on-mobile"><a href="../index.html">Home</a></li>
-          <li class="hide-on-mobile"><a href="driver.html">Driver</a></li>
-          <li class="hide-on-mobile"><a href="news.html">News</a></li>
-          <li class="hide-on-mobile"><a href="about.html">About</a></li>
-          <li class="hide-on-mobile"><a href="login.html">Login</a></li>
-          <li class="daftar-menu">
-            <a href="#" aria-label="Open menu"><img src="../IMG/menu-putih.svg" alt="menu" /></a>
-          </li>
-        </ul>
-      </nav>
+      </aside>
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
     </header>
+
     <main>
       <section class="about-satu">
-        <div class="about-dua">
-          <h1>About Us</h1>
-          <div class="paragraf-about">
-            <p>
-              Welcome to my Formula One website! I’m a huge F1 fan, and my passion for the sport inspired me to create this platform. Here, you’ll find the latest news, race analysis, driver profiles, team histories, and everything exciting
-              about the world of Formula One. My goal is to share knowledge, updates, and the thrill of every lap with fellow F1 enthusiasts. Thanks for stopping by, and I hope you enjoy the content!
-            </p>
+        <div class="about-satu-container">
+          <!-- Left Column -->
+          <div class="about-dua">
+            <h1>About Us</h1>
+            <div class="paragraf-about">
+              <p>
+                Welcome to my Formula One website! I’m a huge F1 fan, and my passion for motorsport inspired me to create this platform. Here, you’ll find the latest news, race analysis, driver profiles, team histories, and everything exciting
+                about the world of Formula One. My goal is to share knowledge, updates, and the thrill of every lap with fellow F1 enthusiasts. Thanks for stopping by, and I hope you enjoy the content!
+              </p>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon">📱</span>
+              <span class="contact-text">Contact : 0896-9636-1597</span>
+            </div>
           </div>
-          <h2 class="contact">My contact : 089696361597</h2>
-        </div>
-        <div class="kritik-saran">
-          <div class="kritik-saran1">
-            <form>
-              <h2>Feedback</h2>
-              <input class="type-pertama" type="text" placeholder="Username" required /><br />
-              <input class="type-pertama" type="email" placeholder="Email" required />
-              <textarea class="text-area" placeholder="Type Here" required></textarea>
-              <button type="submit">Send</button>
-            </form>
+
+          <!-- Right Column -->
+          <div class="kritik-saran">
+            <div class="kritik-saran1">
+              <form>
+                <h2>Send Feedback</h2>
+                <div class="form-group">
+                  <label for="feedback-user">Username</label>
+                  <input id="feedback-user" class="type-pertama" type="text" placeholder="Enter your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="feedback-email">Email Address</label>
+                  <input id="feedback-email" class="type-pertama" type="email" placeholder="example@domain.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="feedback-msg">Your Message</label>
+                  <textarea id="feedback-msg" class="text-area" placeholder="Share your suggestions, questions, or ideas..." required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="footer-element">
       <p>&copy; 2003-2025 Formula One World Championship Limited. All rights reserved.</p>
     </footer>
+
     <script src="../JS/index.js"></script>
   </body>
 </html>

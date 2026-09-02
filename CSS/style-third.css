@@ -1,121 +1,165 @@
-/* HALAMAN LOGIN */
+/* ===================================================
+   BORKATRACE - LOGIN PAGE STYLING
+   =================================================== */
 
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(11, 17, 20, 0.75), rgba(11, 17, 20, 0.9)),
+              url("../IMG/redbull-racing-4k.webp") no-repeat center center;
+  background-size: cover;
+  padding: calc(var(--nav-height, 70px) + 2rem) 1.5rem 3rem 1.5rem;
+}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing:  border-box;
+/* Glassmorphism Login Card */
+.login-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(18, 26, 32, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 3rem 2.2rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background: url(../IMG/redbull-racing-4k.webp) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-/* box login */
-.login-box{
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background: transparent;    
-    border: 2px solid rgba(255, 255, 255, .5);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(3px);
-}
-/* box login */
-/* judul */
-h2{
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
-}
-/* judul */
-/* input */
-.input-box{
-    position: relative;
-    width: 310px;
-    margin: 30px 0;
-    border-bottom: 2px solid #fff;
-}
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
-}
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
-}
-.input-box input{
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #fff;
-    padding: 0 10px 0 5px;
-}
-/* input */
 
-/* tombol remember */
-.remember-forget{
-    margin: -15px 0 15px;
-    font-size: .9em;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
+.login-box h2 {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.remember-forget label input{
-    margin-right: 3px;
-}
-.remember-forget a{
-    color: #fff;
-    text-decoration: none;
-}
-.remember-forget a:hover{
-    text-decoration: underline;
-}
-button{
-    width: 100%;
-    height: 40px;
-    background: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #000;
-    font-weight: 500;
-}
-/* tombol remember */
 
-/* tombol register */
-.register-link{
-    font-size: .9em;
-    color: #fff;
-    text-align: center;
-    margin: 25px 0 10px;
+/* Floating Input Group */
+.input-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.8rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.3s ease;
+}
 
+.input-box:focus-within {
+  border-bottom-color: var(--f1-red, #e10600);
 }
-.register-link p a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: var(--text-muted, #94a3b8);
+  pointer-events: none;
+  transition: 0.3s ease;
 }
-.register-link p a:hover{
-    text-decoration: underline;
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -6px;
+  font-size: 0.8rem;
+  color: var(--f1-red, #e10600);
+  font-weight: 600;
 }
-/* tombol register */
+
+.input-box input {
+  width: 100%;
+  height: 46px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-body, sans-serif);
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0 5px;
+}
+
+/* Remember & Forgot Row */
+.remember-forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  color: var(--text-secondary, #cbd5e1);
+  margin: -0.5rem 0 1.8rem 0;
+}
+
+.remember-forget label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.remember-forget input[type="checkbox"] {
+  accent-color: var(--f1-red, #e10600);
+  width: 16px;
+  height: 16px;
+}
+
+.remember-forget a {
+  color: var(--text-secondary, #cbd5e1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.remember-forget a:hover {
+  color: var(--f1-red, #e10600);
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.login-box button[type="submit"] {
+  width: 100%;
+  height: 48px;
+  background: var(--f1-red, #e10600);
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(225, 6, 0, 0.4);
+}
+
+.login-box button[type="submit"]:hover {
+  background: var(--f1-red-hover, #ff1e19);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(225, 6, 0, 0.55);
+}
+
+.login-box button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Register Link */
+.register-link {
+  font-size: 0.9rem;
+  color: var(--text-muted, #94a3b8);
+  text-align: center;
+  margin-top: 1.8rem;
+}
+
+.register-link a {
+  color: var(--f1-red, #e10600);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

@@ -1,468 +1,250 @@
-@media (max-width: 780px) {
-  /* NAVIGATION BAR */
-  .hide-on-mobile {
-    display: none;
+/* ===================================================
+   BORKATRACE - GLOBAL RESPONSIVE STYLES (DESKTOP-DOWN)
+   =================================================== */
+
+/* ---------------------------------------------------
+   1. TABLET LANDSCAPE & SMALL LAPTOPS (<= 1024px)
+   --------------------------------------------------- */
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 1.5rem;
   }
-  .daftar-menu {
-    display: block;
-    color: #f5f5f5;
+
+  .nav-links li a {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
   }
-  .side {
-    width: 100%;
+
+  .about-satu-container {
+    gap: 2.5rem;
   }
-  .logo-f1 {
-    width: 30vw;
+
+  .video .video1 {
+    padding: 0 1rem;
   }
-  /* NAVIGATION BAR */
-}
-@media (max-width: 320px) {
-  /* HALAMAN HOME */
-  .opening .opening2 .opening3 .opening4 .paragraf-pertama {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-  .opening .opening2 .opening3 .judul-atas {
-    font-size: 2rem;
-  }
-  .video .video1 .judul-bawah {
-    font-size: 2rem;
-  }
-  .video .video1 .foto img {
-    position: relative;
-    left: 10vw;
-    height: 35vh;
-    width: 82vw;
-    top: 15vh;
-  }
-  .video .video1 .pertama {
-    position: relative;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 20vh;
-    text-indent: 1.5rem;
-    text-align: justify;
-    font-size: 1rem;
-    font-weight: 100;
-    line-height: 1.2rem;
-    text-align: center;
-  }
-  .video .video1 .kedua {
-    position: relative;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 10vh;
-    text-indent: 1.5rem;
-    text-align: justify;
-    font-size: 1rem;
-    font-weight: 100;
-    line-height: 1.2rem;
-    text-align: center;
-  }
-  .video .video1 .ketiga {
-    position: relative;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 10vh;
-    text-indent: 1.5rem;
-    text-align: justify;
-    font-size: 1rem;
-    font-weight: 100;
-    line-height: 1.2rem;
-    text-align: center;
-  }
-  .video .video1 video {
-    position: relative;
-    left: 10vw;
-    height: 35vh;
-    width: 82vw;
-    top: vh;
-  }
-  footer {
-    height: 10vh;
-  }
-  .footer-element p {
-    font-size: 1em;
-    text-align: center;
-  }
-  /* HALAMAN HOME */
-  /* HALAMAN DRIVER */
-  main .background-table .background-table2 .cover-table table th,
-  td {
-    font-size: 1px;
-  }
-  h2 {
-    position: relative;
-    padding-left: 1vw;
-    top: 8vh;
-    text-align: center;
-    padding-bottom: 5vh;
-    font-size: 1.5rem;
-  }
-  h3 {
-    padding-top: 7vh;
-    padding-bottom: 2vh;
-    padding-left: 5vw;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  ul .fact-inside {
-    text-indent: 1.5rem;
-    padding-left: 7vw;
-    padding-right: 10vw;
-    font-size: 1rem;
-    text-align: center;
-  }
-  /* HALAMAN DRIVER */
-  /* HALAMAN NEWS */
-  .news-cover1 .news-cover2 h1 {
-    position: relative;
-    top: 10vh;
-    padding-left: 6vw;
-    font-size: 2rem;
-    text-align: center;
-  }
-  main section .main-foto {
-    position: relative;
-    top: 18vh;
-    padding-left: 6vw;
-    width: 95vw;
-    height: 30vh;
-  }
-  main section .second-foto {
-    position: relative;
-    width: 90vw;
-    left: 5vw;
-  }
-  .news-cover1 .news-cover2 p {
-    padding-left: 5vw;
-    padding-top: 20vh;
-    padding-bottom: 10vh;
-    line-height: 4.5vh;
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: start;
-  }
-  /* HALAMAN NEWS */
-  /* HALAMAN ABOUT */
-  .about-satu .about-dua h2 {
-    font-size: 1.5rem;
-  }
-  .about-satu .about-dua p {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    font-size: 1rem;
-    text-align: center;
-  }
-  .about-satu .about-dua .paragraf-about {
-    padding-top: 5vh;
-  }
-  .about-satu .kritik-saran .kritik-saran1 h2 {
-    font-size: 1.5rem;
-    position: relative;
-    left: 0;
-  }
-  .about-satu .kritik-saran .kritik-saran1 .type-pertama {
-    font-size: 1em;
-    min-width: 40vw;
-    left: 0vw;
-  }
-  .about-satu .kritik-saran button {
-    font-size: 10px;
-    width: 10vw;
-  }
-  .about-satu .kritik-saran .kritik-saran1 .text-area {
-    font-size: 1rem;
-    width: 40vw;
-    max-height: 25vh;
-  }
-  .about-satu .about-dua p {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .about-satu .kritik-saran .kritik-saran1 {
-    position: relative;
-    width: 50vw;
-    left: 0;
-  }
-  .about-satu .about-dua .paragraf-about p {
-    padding-left: 0vw;
-    padding-right: 0vw;
-    font-size: 1rem;
-  }
-  .about-satu .about-dua h2 {
-    padding-right: 0vw;
-    padding-left: 0vw;
-    font-size: 1rem;
-  }
-  .about-satu .kritik-saran .kritik-saran1 input::placeholder {
-    font-size: 11px;
-  }
-  .about-satu .kritik-saran .kritik-saran1 textarea::placeholder {
-    font-size: 11px;
-  }
-  /* HALAMAN ABOUT */
 }
 
-@media (min-width: 1024px) {
-  /* HALAMAN HOME */
-  .opening .opening2 .opening3 .opening4 .paragraf-pertama {
-    font-size: 2rem;
-    line-height: 2em;
-  }
-  .video .video1 .judul-bawah {
-    position: relative;
-    top: 10vh;
-    display: flex;
-    padding-left: 20vw;
-    font-size: 3.5rem;
-    text-align: center;
-  }
-  .footer-element p {
-    font-size: 1.5rem;
-  }
-  /* HALAMAN HOME */
-  /* HALAMAN NEWS */
-  .news-cover1 .news-cover2 h1 {
-    position: absolute;
-    font-size: 5rem;
-    top: 20vh;
-  }
-  /* HALAMAN NEWS */
-  /* HALAMAN ABOUT */
-  .about-satu .about-dua h2 {
-    font-size: 2rem;
-  }
-  .about-satu .about-dua p {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  .kritik-saran .kritik-saran1 h2 {
-    position: relative;
-    left: 8vw;
-    font-size: 2rem;
-  }
-  .about-satu .kritik-saran .type-pertama {
-    font-size: 1rem;
-  }
-  .about-satu .kritik-saran button {
-    font-size: 1em;
-  }
-  .about-satu .kritik-saran .text-area {
-    font-size: 1rem;
-  }
-  /* HALAMAN ABOUT */
-}
-@media (max-width: 480px) {
-  /* HALAMAN NEWS */
-  .news-cover1 .news-cover2 h1 {
-    position: relative;
-    top: 10vh;
-    padding-left: 6vw;
-    font-size: 2rem;
-    text-align: center;
-  }
-  main section .main-foto {
-    position: relative;
-    top: 18vh;
-    padding-left: 6vw;
-    width: 95vw;
-    height: 30vh;
-  }
-  main section .second-foto {
-    position: relative;
-    width: 90vw;
-    left: 5vw;
-  }
-  .news-cover1 .news-cover2 p {
-    padding-left: 5vw;
-    padding-top: 20vh;
-    padding-bottom: 10vh;
-    line-height: 4.5vh;
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: start;
-  }
-  /* HALAMAN NEWS */
-  /* Halaman about */
-  .about-satu .about-dua h2 {
-    font-size: 1.5rem;
-  }
-  .about-satu .about-dua p {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    font-size: 1rem;
-    text-align: center;
-  }
-  .about-satu .kritik-saran .kritik-saran1 {
-    min-width: 70vw;
-    min-height: 70vh;
-    left: 15vw;
-  }
-  .kritik-saran .kritik-saran1 h2 {
-    position: relative;
-    font-size: 1.5rem;
-  }
-  .about-satu .kritik-saran .type-pertama {
-    width: 30vw;
-    left: 15vw;
-  }
-  .about-satu .kritik-saran button {
-    min-width: 15vw;
-    min-height: 4vw;
-    font-size: 12px;
-  }
-  .about-satu .kritik-saran .text-area {
-    width: 20vw;
-    height: 25vh;
-    left: 5vw;
-  }
-  .opening .opening2 .opening3 .opening4 .paragraf-pertama {
-    font-size: 1.2rem;
-  }
-  .opening .opening2 .opening3 .judul-atas {
-    font-size: 1.5rem;
-  }
-  .about-satu .kritik-saran .kritik-saran1 input::placeholder {
-    font-size: 12px;
-  }
-  .about-satu .kritik-saran .kritik-saran1 textarea::placeholder {
-    font-size: 12px;
-  }
-  /* Halaman about */
-  /* HALAMAN DRIVER */
-  main .background-table .background-table2 .cover-table table {
-    max-width: 10vw;
-  }
-  main .background-table .background-table2 .cover-table table th,
-  td {
-    font-size: 1rem;
-  }
-  main .fact .fact-first ul h3 {
-    font-size: 1.5rem;
-  }
-  main .fact .fact-first ul li {
-    font-size: 1rem;
-  }
-  main header .judul-fact {
-    font-size: 2rem;
-  }
-  /* HALAMAN DRIVER */
-  /* HALAMAN HOME */
-  .video .video1 .foto img {
-    width: 72vw;
-    left: 15vw;
-    height: 40vh;
-  }
-  .video .video1 .judul-bawah {
-    font-size: 2rem;
-    left: 0;
-  }
-  .video .video1 .pertama {
-    font-size: 1rem;
-  }
-  .video .video1 .kedua {
-    font-size: 1rem;
-  }
-  .video .video1 .ketiga {
-    font-size: 1rem;
-  }
-  .footer-element p {
-    font-size: 1rem;
-  }
-  /* HALAMAN HOME */
-}
+/* ---------------------------------------------------
+   2. TABLETS & SMARTPHONES (<= 768px)
+   --------------------------------------------------- */
 @media (max-width: 768px) {
-  /* HALAMAN ABOUT */
-  .kritik-saran .kritik-saran1 h2 {
-    position: relative;
-    left: 15vw;
+  :root {
+    --nav-height: 64px;
+  }
+
+  /* Navigation Bar Mobile Layout */
+  .nav-links {
+    display: none !important;
+  }
+
+  .menu-toggle-btn {
+    display: flex !important;
+  }
+
+  .nav-container {
+    padding: 0 1.25rem;
+  }
+
+  .logo-f1 {
+    height: 32px;
+  }
+
+  /* Homepage Adjustments */
+  .opening {
+    padding-top: calc(var(--nav-height) + 2.5rem);
+    padding-bottom: 3.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .video {
+    padding: 4rem 1.25rem;
+  }
+
+  .video .pertama,
+  .video .kedua,
+  .video .ketiga {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 1.6rem;
+  }
+
+  .video .foto {
+    margin-bottom: 2rem;
+  }
+
+  .video .video-bg {
+    margin: 1.8rem auto;
+  }
+
+  /* About Page Responsive Grid */
+  .about-satu {
+    padding-top: calc(var(--nav-height) + 2.5rem);
+    padding-bottom: 3.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .about-satu-container {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+
+  .about-dua {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-dua h1::after {
+    margin: 10px auto 0 auto;
+  }
+
+  .paragraf-about p {
+    text-align: left;
+    font-size: 1.05rem;
+  }
+
+  .contact-card {
+    margin: 0 auto;
+  }
+
+  .kritik-saran1 {
+    padding: 2.2rem 1.6rem;
+  }
+
+  /* News Page Responsive */
+  .news-cover1 {
+    padding-top: calc(var(--nav-height) + 2.5rem);
+    padding-bottom: 3.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .news-cover2 h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1.6rem;
+  }
+
+  .news-cover2 p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  /* Driver Page Responsive */
+  .driver-hero-section {
+    padding-top: calc(var(--nav-height) + 2.5rem);
+    padding-bottom: 2.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .main-page-title {
+    font-size: 2.2rem;
+  }
+
+  .drivers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .fact-article {
+    margin-top: 2.5rem;
+    padding: 0 1.25rem;
+  }
+
+  .judul-fact {
+    font-size: 1.9rem;
+  }
+
+  .fact-first {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ---------------------------------------------------
+   3. SMALL SMARTPHONES (<= 480px)
+   --------------------------------------------------- */
+@media (max-width: 480px) {
+  :root {
+    --nav-height: 60px;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .logo-f1 {
+    height: 28px;
+  }
+
+  .mobile-sidebar {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .opening .judul-atas {
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+  }
+
+  .opening .paragraf-pertama {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .video .judul-bawah {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .video .pertama,
+  .video .kedua,
+  .video .ketiga {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  /* Driver Cards Mobile */
+  .main-page-title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle-page {
+    font-size: 0.95rem;
+  }
+
+  .drivers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .driver-card {
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Login Box Mobile */
+  .login-box {
+    padding: 2.2rem 1.4rem;
+    border-radius: 16px;
+  }
+
+  .login-box h2 {
     font-size: 1.8rem;
   }
-  .about-satu .kritik-saran .type-pertama {
-    font-size: 1em;
-    min-width: 25vw;
-    left: 10vw;
+
+  /* Feedback Form Mobile */
+  .kritik-saran1 {
+    padding: 1.8rem 1.2rem;
+    border-radius: 14px;
   }
-  .about-satu .kritik-saran button {
-    font-size: 10px;
-    width: 10vw;
-  }
-  .about-satu .kritik-saran .text-area {
-    font-size: 1rem;
-    min-width: 35vw;
-    min-height: 15vw;
-    left: 5vw;
-  }
-  .about-satu .about-dua h2 {
-    font-size: 2rem;
-  }
-  .about-satu .about-dua p {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .about-satu .kritik-saran .kritik-saran1 {
-    min-width: 45vw;
-    min-height: 65vh;
-    left: 30vw;
-  }
-  /* HALAMAN ABOUT */
-  /* HALAMAN NEWS */
-  main .news-cover1 .news-cover2 h1 {
-    font-size: 3rem;
-  }
-  /* HALAMAN NEWS */
-  /* HALAMAN HOME */
-  .opening .opening2 .opening3 .opening4 .paragraf-pertama {
+
+  .kritik-saran1 h2 {
     font-size: 1.5rem;
   }
-  .video .video1 .pertama {
-    font-size: 1rem;
-  }
-  .video .video1 .kedua {
-    font-size: 1rem;
-  }
-  .video .video1 .ketiga {
-    font-size: 1rem;
-  }
-  .video .video1 .judul-bawah {
-    font-size: 2.5rem;
-  }
-  .footer-element p {
-    font-size: 1rem;
-  }
-  /* HALAMAN HOME */
-  /* HALAMAN DRIVER */
-  main .background-table .background-table2 .cover-table table th,
-  td {
-    font-size: 1rem;
-  }
-  main .fact .fact-first ul h3 {
-    font-size: 1.5rem;
-  }
-  main .fact .fact-first ul li {
-    font-size: 1rem;
-  }
-  main header .judul-fact {
-    font-size: 2rem;
-  }
-  /* HALAMAN DRIVER */
-  /* HALAMAN NEWS */
-  .news-cover1 .news-cover2 p {
-    font-size: 1.2rem;
-  }
-  /* HALAMAN NEWS */
-  /* HALAMAN ABOUT */
-  .about-satu .kritik-saran .kritik-saran1 input::placeholder {
-    font-size: 11px;
-  }
-  .about-satu .kritik-saran .kritik-saran1 textarea::placeholder {
-    font-size: 11px;
-  }
-  /* HALAMAN ABOUT */
 }

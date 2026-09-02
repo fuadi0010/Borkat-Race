@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Latest Formula 1 breaking news, Grand Prix race analysis, driver rivalries, and team strategies." />
+    <meta name="description" content="Formula 1 Breaking News, live race control bulletins, technical upgrades, team strategies, and driver transfer paddock updates." />
     <meta name="theme-color" content="#0b1114" />
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Did McLaren handle Piastri-Norris fight fairly? Our verdict - BorkatRace" />
-    <meta property="og:description" content="Deep tactical analysis on the Hungarian Grand Prix split-strategy debate between Lando Norris and Oscar Piastri." />
+    <meta property="og:title" content="Formula 1 Live News Hub - BorkatRace" />
+    <meta property="og:description" content="Stay up to date with real-time Formula 1 news, live FIA race control bulletins, and technical analysis." />
     <meta property="og:image" content="../IMG/meclarennews.jpg" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Did McLaren handle Piastri-Norris fight fairly? - BorkatRace" />
-    <meta name="twitter:description" content="Deep tactical analysis on the Hungarian Grand Prix split-strategy debate." />
+    <meta name="twitter:title" content="Formula 1 Live News - BorkatRace" />
+    <meta name="twitter:description" content="Stay up to date with real-time Formula 1 news, live FIA race control bulletins, and technical analysis." />
     <meta name="twitter:image" content="../IMG/meclarennews.jpg" />
 
     <link rel="icon" type="image/png" href="../IMG/f1_75-removebg-preview.png" />
-    <title>News - BorkatRace</title>
+    <title>Live News & Race Control - BorkatRace</title>
     <link rel="stylesheet" href="../CSS/style-one.css" />
     <link rel="stylesheet" href="../CSS/style-five.css" />
     <link rel="stylesheet" href="../CSS/style-responsive.css" />
   </head>
-  <body>
+  <body class="body-news">
     <!-- Site Header with Decoupled Mobile Sidebar -->
     <header class="site-header">
       <nav class="navbar" id="navbar">
@@ -65,24 +65,59 @@
     </header>
 
     <main>
-      <section class="news-cover1">
-        <div class="news-cover2">
-          <h1>Did McLaren handle Piastri-Norris fight fairly? Our verdict</h1>
-          <img class="main-foto" src="../IMG/meclarennews.jpg" alt="McLaren F1 Car in Hungarian GP" loading="lazy" />
-          <p>
-            The McLaren drivers' eventual split-strategy certainly made for a gripping end to Formula 1's Hungarian Grand Prix. But was that strategic split - which ultimately decided the outcome of the race - handled fairly, especially
-            with the two-stopping Oscar Piastri telling McLaren on multiple occasions he wanted the "best chance" to try to beat one-stopping race-winner Lando Norris?
-          </p>
-          <img class="second-foto" src="../IMG/piastri.jpg" alt="Oscar Piastri Podium" loading="lazy" />
-          <p>
-            I feel for Piastri. Norris soaked up a lot of pressure late on and did well to make 
-            the one-stop work: but lots of drivers did, so that strategy turned out to be perfectly 
-            viable, and Norris only really ended up on that strategy
-            because he had a poor opening lap. There might have been something McLaren could have 
-            done more sharply with Piastri's strategy. Maybe trying to undercut Charles Leclerc in 
-            the first stint was premature. But if it didn't try,
-            we'd likely all be asking why McLaren wasn't aggressive and trying to win the race.
-          </p>
+      <!-- FIA Race Control Live Bulletin Ticker -->
+      <div class="race-control-ticker-bar">
+        <div class="ticker-content-wrap">
+          <div class="ticker-header-badge">
+            <span class="live-dot"></span>
+            <span>FIA RACE CONTROL LIVE</span>
+          </div>
+          <div class="ticker-viewport">
+            <div id="race-control-ticker" class="ticker-track">
+              <span class="ticker-item">Mengambil siaran radio direksi balap FIA...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="news-page-section">
+        <div class="news-main-container">
+          <!-- Page Header -->
+          <div class="news-header">
+            <h1 class="news-page-title">Paddock News & Grand Prix Wire</h1>
+            <p class="news-subtitle">Breaking Formula 1 stories, live technical development reports, driver transfer market insights, and in-depth race reviews</p>
+          </div>
+
+          <!-- News Search & Category Filter Controls -->
+          <div class="news-controls-bar">
+            <div class="news-search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="news-search-input" placeholder="Search news by headline, team, or driver..." aria-label="Search news" />
+            </div>
+            <div class="news-filter-scroll">
+              <button class="news-filter-pill is-active" data-category="all">All Stories</button>
+              <button class="news-filter-pill" data-category="Formula 1">Grand Prix</button>
+              <button class="news-filter-pill" data-category="Technical">Technical & Aero</button>
+              <button class="news-filter-pill" data-category="Strategy">Race Strategy</button>
+              <button class="news-filter-pill" data-category="Drivers">Driver Market</button>
+              <button class="news-filter-pill" data-category="Monza">Italian GP</button>
+            </div>
+          </div>
+
+          <!-- Loading State Indicator -->
+          <div id="news-loading" class="news-loading-state">
+            <div class="spinner"></div>
+            <p>Mengambil artikel berita Formula 1 terkini dari live wire...</p>
+          </div>
+
+          <!-- Lead Featured Breaking Article -->
+          <div id="featured-news-container" class="featured-news-wrapper"></div>
+
+          <!-- Multi-Article News Grid -->
+          <div class="news-grid-section-header">
+            <h2 class="news-grid-title">Latest Headlines & Technical Analysis</h2>
+          </div>
+          <div id="news-grid-container" class="news-cards-grid"></div>
         </div>
       </section>
     </main>
@@ -95,5 +130,6 @@
     </footer>
 
     <script src="../JS/index.js"></script>
+    <script src="../JS/news.js"></script>
   </body>
 </html>

@@ -87,11 +87,9 @@ function formatTimeOnly(isoString) {
 
 async function ambilDataPembalap() {
   const loadingEl = document.getElementById("loading-spinner");
-  const gridEl = document.getElementById("drivers-grid");
-  const tableWrapper = document.getElementById("table-wrapper");
 
-  const kunciCache = "borkat_f1_drivers_v3";
-  const waktuCache = "borkat_f1_drivers_time_v3";
+  const kunciCache = "borkat_f1_drivers_v4";
+  const waktuCache = "borkat_f1_drivers_time_v4";
   const satuJam = 3600000;
 
   try {
@@ -234,10 +232,10 @@ function renderDriverTable(drivers) {
 
   tbth.innerHTML = `
     <tr>
-      <th>Flag</th>
-      <th>No</th>
-      <th>Driver Name</th>
-      <th>Team</th>
+      <th style="text-align: center; width: 60px;">Flag</th>
+      <th style="text-align: center; width: 70px;">No</th>
+      <th style="min-width: 200px;">Driver Name</th>
+      <th style="min-width: 180px;">Official Team</th>
     </tr>
   `;
 
@@ -246,16 +244,24 @@ function renderDriverTable(drivers) {
 
   drivers.forEach((driver) => {
     const country = resolveDriverCountry(driver);
-    const teamColor = driver.team_colour ? `#${driver.team_colour}` : "#e10600";
+    const teamColor = driver.team_colour ? `#${driver.team_colour}` : `#${DEFAULT_TEAM_COLORS[driver.team_name] || "e10600"}`;
+    const teamName = driver.team_name || "Formula 1 Team";
     const row = document.createElement("tr");
 
     row.innerHTML = `
-      <td>
+      <td style="text-align: center;">
         <img src="https://flagcdn.com/w40/${country.code}.png" alt="${country.name}" style="width: 24px; border-radius: 3px; vertical-align: middle;" onerror="this.style.display='none'" />
       </td>
-      <td><strong style="color: ${teamColor}">${driver.driver_number || "-"}</strong></td>
-      <td>${driver.full_name || "-"}</td>
-      <td>${driver.team_name || "-"}</td>
+      <td style="text-align: center;"><strong style="color: ${teamColor}; font-size: 1.25rem;">${driver.driver_number || "-"}</strong></td>
+      <td>
+        <strong style="color: #ffffff; font-size: 1.15rem;">${driver.full_name || "-"}</strong>
+        <span style="font-size: 0.82rem; color: #94a3b8; margin-left: 6px; font-weight: 700;">(${driver.name_acronym || ""})</span>
+      </td>
+      <td>
+        <span class="table-team-badge" style="border-left: 4px solid ${teamColor}; padding-left: 10px; display: inline-block; color: #f1f5f9; font-weight: 600;">
+          ${teamName}
+        </span>
+      </td>
     `;
     fragment.appendChild(row);
   });

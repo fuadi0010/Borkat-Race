@@ -9,7 +9,7 @@
               url("../IMG/background-about.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  padding: calc(var(--nav-height, 70px) + 3rem) 1.5rem 5rem 1.5rem;
+  padding: calc(var(--nav-height, 84px) + 3.5rem) 2.5rem 6rem 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,10 @@
 
 .about-satu-container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1280px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3.5rem;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -32,10 +32,10 @@
 
 .about-dua h1 {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 800;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 900;
   color: #ffffff;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.5px;
   text-transform: uppercase;
 }
@@ -43,42 +43,42 @@
 .about-dua h1::after {
   content: '';
   display: block;
-  width: 60px;
-  height: 4px;
+  width: 70px;
+  height: 5px;
   background: var(--f1-red, #e10600);
-  margin-top: 10px;
-  border-radius: 2px;
+  margin-top: 14px;
+  border-radius: 3px;
 }
 
 .paragraf-about p {
   font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.35rem;
+  line-height: 2;
   color: var(--text-secondary, #cbd5e1);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   text-align: justify;
 }
 
 .contact-card {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(23, 36, 44, 0.7);
-  border: 1px solid var(--f1-border, rgba(255, 255, 255, 0.1));
-  padding: 12px 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
+  gap: 14px;
+  background: rgba(23, 36, 44, 0.85);
+  border: 1px solid var(--f1-border, rgba(255, 255, 255, 0.15));
+  padding: 16px 26px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
   width: fit-content;
 }
 
 .contact-card .contact-icon {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .contact-card .contact-text {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -88,13 +88,13 @@
 }
 
 .kritik-saran1 {
-  background: rgba(18, 26, 32, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  padding: 2.5rem;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background: rgba(18, 26, 32, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
 }
 
 .kritik-saran1 form {
@@ -104,38 +104,38 @@
 
 .kritik-saran1 h2 {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 800;
   color: #ffffff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
   text-align: left;
 }
 
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   width: 100%;
 }
 
 .form-group label {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text-muted, #94a3b8);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .type-pertama,
 .text-area {
   width: 100%;
-  background: rgba(11, 17, 20, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 12px 16px;
+  background: rgba(11, 17, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 14px 18px;
   color: #ffffff;
   font-family: var(--font-body, sans-serif);
-  font-size: 0.95rem;
+  font-size: 1.18rem;
   outline: none;
   transition: all 0.25s ease;
 }
@@ -143,8 +143,8 @@
 .type-pertama:focus,
 .text-area:focus {
   border-color: var(--f1-red, #e10600);
-  background: rgba(11, 17, 20, 0.85);
-  box-shadow: 0 0 0 3px rgba(225, 6, 0, 0.2);
+  background: rgba(11, 17, 20, 0.95);
+  box-shadow: 0 0 0 4px rgba(225, 6, 0, 0.25);
 }
 
 .type-pertama::placeholder,
@@ -153,32 +153,32 @@
 }
 
 .text-area {
-  min-height: 120px;
+  min-height: 140px;
   resize: vertical;
 }
 
 .kritik-saran button {
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   background: var(--f1-red, #e10600);
   color: #ffffff;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.25s ease;
-  margin-top: 0.5rem;
-  box-shadow: 0 6px 20px rgba(225, 6, 0, 0.35);
+  margin-top: 0.8rem;
+  box-shadow: 0 8px 24px rgba(225, 6, 0, 0.45);
 }
 
 .kritik-saran button:hover {
   background: var(--f1-red-hover, #ff1e19);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(225, 6, 0, 0.5);
+  box-shadow: 0 10px 28px rgba(225, 6, 0, 0.6);
 }
 
 .kritik-saran button:active {

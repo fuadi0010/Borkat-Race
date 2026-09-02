@@ -1,5 +1,5 @@
 // ===================================================
-// BORKATRACE - GLOBAL NAVIGATION & INTERACTIVITY
+// BORKATRACE - GLOBAL NAVIGATION & INTERACTIVITY (v4)
 // ===================================================
 
 // Global helper functions for sidebar control
@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.getElementById("sidebar-close-btn");
   const backdrop = document.getElementById("sidebar-backdrop");
   const sidebarLinks = document.querySelectorAll(".sidebar-links a");
+  const backToTopBtn = document.getElementById("back-to-top-btn");
 
   if (menuToggle) {
     menuToggle.addEventListener("click", function (e) {
@@ -70,19 +71,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close sidebar when any link inside it is clicked
   sidebarLinks.forEach((link) => {
     link.addEventListener("click", function () {
       closeMobileSidebar();
     });
   });
 
-  // Close on Escape key press
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       closeMobileSidebar();
     }
   });
+
+  // Back to Top Button Interaction
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
 
   // Handle Feedback Form in about.html
   const feedbackForm = document.querySelector(".kritik-saran form");
@@ -124,33 +133,92 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../index.html";
     });
   }
+
+  // ---------------------------------------------------
+  // Lazy Loading & Performance Optimization for Video
+  // ---------------------------------------------------
+  const lazyVideo = document.querySelector("video.lazy-f1-video");
+  const videoPlayToggle = document.getElementById("video-play-toggle");
+
+  if (lazyVideo && "IntersectionObserver" in window) {
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Lazy load video source when scrolled into view
+            const source = lazyVideo.querySelector("source");
+            if (source && source.dataset.src && !source.src) {
+              source.src = source.dataset.src;
+              lazyVideo.load();
+            }
+            lazyVideo.play().catch(() => {
+              // Autoplay policy fallback
+            });
+          } else {
+            // Pause video when scrolled out of view to save CPU & battery
+            if (!lazyVideo.paused) {
+              lazyVideo.pause();
+            }
+          }
+        });
+      },
+      { rootMargin: "150px 0px", threshold: 0.15 }
+    );
+
+    videoObserver.observe(lazyVideo);
+
+    if (videoPlayToggle) {
+      videoPlayToggle.addEventListener("click", function () {
+        if (lazyVideo.paused) {
+          lazyVideo.play();
+          videoPlayToggle.innerHTML = "⏸";
+          videoPlayToggle.setAttribute("aria-label", "Pause video");
+        } else {
+          lazyVideo.pause();
+          videoPlayToggle.innerHTML = "▶";
+          videoPlayToggle.setAttribute("aria-label", "Play video");
+        }
+      });
+    }
+  }
 });
 
-// Throttled Navbar scroll behavior (hide when scrolling down, show when scrolling up)
+// Throttled Scroll Listener: Navbar & Back-to-Top Toggle
 let lastScrollY = 0;
 let isTicking = false;
 const navbar = document.getElementById("navbar");
+const backToTopBtn = document.getElementById("back-to-top-btn");
 
-if (navbar) {
-  window.addEventListener(
-    "scroll",
-    function () {
-      if (!isTicking) {
-        window.requestAnimationFrame(function () {
-          const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+window.addEventListener(
+  "scroll",
+  function () {
+    if (!isTicking) {
+      window.requestAnimationFrame(function () {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
 
+        // Navbar Hide/Show
+        if (navbar) {
           if (currentScrollY > lastScrollY && currentScrollY > 100) {
             navbar.classList.add("navbar-hidden");
           } else {
             navbar.classList.remove("navbar-hidden");
           }
+        }
 
-          lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
-          isTicking = false;
-        });
-        isTicking = true;
-      }
-    },
-    { passive: true }
-  );
-}
+        // Back to Top Button Visibility
+        if (backToTopBtn) {
+          if (currentScrollY > 400) {
+            backToTopBtn.classList.add("is-visible");
+          } else {
+            backToTopBtn.classList.remove("is-visible");
+          }
+        }
+
+        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+        isTicking = false;
+      });
+      isTicking = true;
+    }
+  },
+  { passive: true }
+);

@@ -7,29 +7,38 @@
    --------------------------------------------------- */
 @media (max-width: 1024px) {
   .nav-container {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
+  }
+
+  .logo-f1 {
+    height: 42px;
   }
 
   .nav-links li a {
-    font-size: 0.95rem;
-    padding: 0.5rem 0.8rem;
+    font-size: 1.1rem;
+    padding: 0.55rem 1rem;
   }
 
   .about-satu-container {
-    gap: 2.5rem;
+    gap: 3rem;
   }
 
   .video .video1 {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+  }
+
+  .drivers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
   }
 }
 
 /* ---------------------------------------------------
-   2. TABLETS & SMARTPHONES (<= 768px)
+   2. TABLETS & LARGE SMARTPHONES (<= 768px)
    --------------------------------------------------- */
 @media (max-width: 768px) {
   :root {
-    --nav-height: 64px;
+    --nav-height: 70px;
   }
 
   /* Navigation Bar Mobile Layout */
@@ -42,53 +51,81 @@
   }
 
   .nav-container {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
   }
 
   .logo-f1 {
-    height: 32px;
+    height: 38px;
   }
 
   /* Homepage Adjustments */
   .opening {
     padding-top: calc(var(--nav-height) + 2.5rem);
     padding-bottom: 3.5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .opening .judul-atas {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  .opening .paragraf-pertama {
+    font-size: 1.2rem;
+    line-height: 1.85;
+    text-align: justify;
   }
 
   .video {
-    padding: 4rem 1.25rem;
+    padding: 4.5rem 1.5rem;
+  }
+
+  .video .judul-bawah {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
   }
 
   .video .pertama,
   .video .kedua,
   .video .ketiga {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    text-align: left;
-    margin-bottom: 1.6rem;
-  }
-
-  .video .foto {
+    font-size: 1.18rem;
+    line-height: 1.85;
+    text-align: justify;
     margin-bottom: 2rem;
   }
 
+  .video .foto {
+    margin-bottom: 2.5rem;
+  }
+
+  .video .foto img {
+    border-radius: 14px;
+  }
+
   .video .video-bg {
-    margin: 1.8rem auto;
+    border-radius: 14px;
+  }
+
+  .video-play-toggle-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    bottom: 16px;
+    right: 16px;
   }
 
   /* About Page Responsive Grid */
   .about-satu {
     padding-top: calc(var(--nav-height) + 2.5rem);
-    padding-bottom: 3.5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-bottom: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .about-satu-container {
     grid-template-columns: 1fr;
-    gap: 2.8rem;
+    gap: 3rem;
   }
 
   .about-dua {
@@ -96,89 +133,142 @@
     text-align: center;
   }
 
+  .about-dua h1 {
+    font-size: 2.5rem;
+  }
+
   .about-dua h1::after {
-    margin: 10px auto 0 auto;
+    margin: 12px auto 0 auto;
   }
 
   .paragraf-about p {
-    text-align: left;
-    font-size: 1.05rem;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.85;
   }
 
   .contact-card {
     margin: 0 auto;
+    padding: 14px 22px;
+  }
+
+  .contact-card .contact-text {
+    font-size: 1.15rem;
   }
 
   .kritik-saran1 {
-    padding: 2.2rem 1.6rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .kritik-saran1 h2 {
+    font-size: 2rem;
   }
 
   /* News Page Responsive */
   .news-cover1 {
     padding-top: calc(var(--nav-height) + 2.5rem);
-    padding-bottom: 3.5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-bottom: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .news-cover2 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.3;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .main-foto,
+  .second-foto {
+    border-radius: 14px;
   }
 
   .news-cover2 p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.85;
+    text-align: justify;
   }
 
-  /* Driver Page Responsive */
+  .news-cover2 p:first-of-type {
+    font-size: 1.35rem;
+    padding-left: 1.2rem;
+  }
+
+  /* Driver Page Tablet Adjustments */
   .driver-hero-section {
     padding-top: calc(var(--nav-height) + 2.5rem);
-    padding-bottom: 2.5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-bottom: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .main-page-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle-page {
+    font-size: 1.2rem;
+  }
+
+  .weather-widget-container {
+    padding: 1.4rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .driver-controls-bar {
+    margin-bottom: 2.2rem;
+  }
+
+  .table-swipe-hint {
+    display: inline-block !important;
+  }
+
+  .team-radio-section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .section-title {
     font-size: 2.2rem;
   }
 
-  .drivers-grid {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 1.25rem;
+  .section-subtitle {
+    font-size: 1.15rem;
   }
 
   .fact-article {
-    margin-top: 2.5rem;
-    padding: 0 1.25rem;
+    margin-top: 3.5rem;
+    padding: 0 1.5rem;
   }
 
   .judul-fact {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
   }
 
   .fact-first {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.8rem;
   }
 }
 
 /* ---------------------------------------------------
-   3. SMALL SMARTPHONES (<= 480px)
+   3. MOBILE PHONES (<= 640px) - DEDICATED COMPACT 2-COL
    --------------------------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   :root {
-    --nav-height: 60px;
+    --nav-height: 64px;
   }
 
   .nav-container {
-    padding: 0 1rem;
+    padding: 0 1.2rem;
   }
 
   .logo-f1 {
-    height: 28px;
+    height: 34px;
+  }
+
+  .menu-toggle-btn img {
+    width: 26px;
+    height: 26px;
   }
 
   .mobile-sidebar {
@@ -186,65 +276,430 @@
     max-width: 100vw;
   }
 
+  /* Homepage Mobile */
+  .opening {
+    padding-top: calc(var(--nav-height) + 2rem);
+    padding-bottom: 3rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
   .opening .judul-atas {
     font-size: 2.1rem;
     letter-spacing: 1px;
+    margin-bottom: 1.2rem;
   }
 
   .opening .paragraf-pertama {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+
+  .video {
+    padding: 3.5rem 1.2rem;
   }
 
   .video .judul-bawah {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .video .judul-bawah::after {
+    width: 60px;
+    height: 4px;
+    margin-top: 12px;
+  }
+
+  .video .foto {
     margin-bottom: 2rem;
   }
 
   .video .pertama,
   .video .kedua,
   .video .ketiga {
-    font-size: 0.98rem;
-    line-height: 1.75;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
   }
 
-  /* Driver Cards Mobile */
+  .video-wrapper {
+    margin: 2rem auto;
+  }
+
+  /* ---------------------------------------------
+     DRIVER PAGE: ELEGANT 2-COLUMN MOBILE CARDS
+     --------------------------------------------- */
+  .driver-hero-section {
+    padding-top: calc(var(--nav-height) + 1.8rem);
+    padding-bottom: 3rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
   .main-page-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
   }
 
   .subtitle-page {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
   }
 
+  /* Weather Widget Mobile */
+  .weather-widget-container {
+    padding: 1.1rem;
+    border-radius: 14px;
+    margin-bottom: 1.8rem;
+  }
+
+  .weather-widget-title {
+    font-size: 1.05rem;
+  }
+
+  .weather-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+
+  .weather-card {
+    padding: 0.8rem;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
+  .weather-icon {
+    font-size: 1.5rem;
+  }
+
+  .weather-label {
+    font-size: 0.78rem;
+  }
+
+  .weather-val {
+    font-size: 1.15rem;
+  }
+
+  .weather-status-card {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  /* Search & Filter Mobile */
+  .driver-controls-bar {
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  #driver-search-input {
+    height: 46px;
+    font-size: 1.05rem;
+    padding: 0 14px 0 44px;
+    border-radius: 10px;
+  }
+
+  .search-icon {
+    left: 14px;
+    font-size: 1.1rem;
+  }
+
+  .team-filter-pill {
+    padding: 7px 14px;
+    font-size: 0.9rem;
+    border-radius: 18px;
+  }
+
+  /* COMPACT 2-COLUMN DRIVER CARDS */
   .drivers-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.8rem !important;
   }
 
   .driver-card {
-    max-width: 320px;
-    margin: 0 auto;
-    width: 100%;
+    border-radius: 12px !important;
+    border-width: 1px !important;
   }
 
-  /* Login Box Mobile */
-  .login-box {
-    padding: 2.2rem 1.4rem;
+  .card-top {
+    padding: 0.6rem 0.7rem 0.2rem 0.7rem !important;
+  }
+
+  .driver-num {
+    font-size: 1.35rem !important;
+  }
+
+  .driver-country-badge {
+    padding: 3px 6px !important;
+    font-size: 0.72rem !important;
+    gap: 4px !important;
+    border-radius: 12px !important;
+  }
+
+  .driver-country-badge img {
+    width: 15px !important;
+    height: 10px !important;
+  }
+
+  .driver-country-badge span {
+    display: none; /* Hide country text label on compact mobile view, keep flag */
+  }
+
+  .card-image-box {
+    height: 130px !important;
+  }
+
+  .driver-photo {
+    max-height: 125px !important;
+  }
+
+  .card-info {
+    padding: 0.65rem 0.75rem 0.8rem 0.75rem !important;
+  }
+
+  .driver-acronym-badge {
+    font-size: 0.72rem !important;
+    padding: 1px 5px !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .driver-name {
+    font-size: 0.98rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 2px !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .driver-team {
+    font-size: 0.78rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* Driver Table Container on Mobile */
+  .cover-table {
+    padding: 1.2rem 1rem !important;
+    margin: 2.5rem 0 1rem 0 !important;
+    border-radius: 14px !important;
+  }
+
+  .table-section-title {
+    font-size: 1.05rem !important;
+  }
+
+  .table-swipe-hint {
+    display: inline-block !important;
+    font-size: 0.78rem !important;
+  }
+
+  .driver-table {
+    min-width: 540px !important;
+  }
+
+  .driver-table th,
+  .driver-table td {
+    padding: 10px 12px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .table-team-badge {
+    font-size: 0.95rem !important;
+  }
+
+  /* Team Radio Mobile */
+  .team-radio-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .radio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .radio-card {
+    padding: 1.1rem;
+    border-radius: 12px;
+  }
+
+  .radio-driver-name {
+    font-size: 1.15rem;
+  }
+
+  .radio-play-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  /* Facts Section Mobile */
+  .fact-article {
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+
+  .judul-fact {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .fact-first {
+    gap: 1.4rem;
+    padding-bottom: 3rem;
+  }
+
+  .fact-category {
+    padding: 1.4rem 1.2rem;
+    border-radius: 12px;
+  }
+
+  .fact-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .fact-category ul li {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin-bottom: 0.9rem;
+  }
+
+  /* About Page Mobile */
+  .about-satu {
+    padding-top: calc(var(--nav-height) + 1.8rem);
+    padding-bottom: 3.5rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .about-dua h1 {
+    font-size: 2.1rem;
+  }
+
+  .paragraf-about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .contact-card {
+    padding: 12px 18px;
+    border-radius: 10px;
+  }
+
+  .contact-card .contact-text {
+    font-size: 1.05rem;
+  }
+
+  .kritik-saran1 {
+    padding: 2rem 1.3rem;
     border-radius: 16px;
   }
 
-  .login-box h2 {
-    font-size: 1.8rem;
-  }
-
-  /* Feedback Form Mobile */
-  .kritik-saran1 {
-    padding: 1.8rem 1.2rem;
-    border-radius: 14px;
-  }
-
   .kritik-saran1 h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+  }
+
+  .type-pertama,
+  .text-area {
+    font-size: 1.05rem;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  .kritik-saran button {
+    font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  /* News Page Mobile */
+  .news-cover1 {
+    padding-top: calc(var(--nav-height) + 1.8rem);
+    padding-bottom: 3.5rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .news-cover2 h1 {
+    font-size: 1.85rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+
+  .news-cover2 p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .news-cover2 p:first-of-type {
+    font-size: 1.25rem;
+    padding-left: 1rem;
+    border-left-width: 4px;
+  }
+
+  /* Login Page Mobile */
+  .login-section {
+    padding-top: calc(var(--nav-height) + 1.8rem);
+    padding-bottom: 3.5rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .login-box {
+    padding: 2.5rem 1.6rem;
+    border-radius: 20px;
+  }
+
+  .login-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .input-box input {
+    height: 46px;
+    font-size: 1.1rem;
+  }
+
+  .input-box label {
+    font-size: 1.05rem;
+  }
+
+  .remember-forget {
+    font-size: 0.95rem;
+  }
+
+  .login-box button[type="submit"] {
+    height: 48px;
+    font-size: 1.15rem;
+    border-radius: 12px;
+  }
+
+  .register-link {
+    font-size: 0.98rem;
+  }
+
+  /* Back to Top Mobile */
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
   }
 }

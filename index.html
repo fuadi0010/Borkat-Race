@@ -4,9 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Welcome to BorkatRace - The ultimate Formula 1 portal with news, live driver standings, technical analysis, and racing insights." />
+    <meta name="theme-color" content="#0b1114" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BorkatRace - The Pinnacle of Motorsport" />
+    <meta property="og:description" content="Explore live Formula 1 driver lineups, team radio coms, circuit telemetry, and breaking news." />
+    <meta property="og:image" content="IMG/redbull-racing-4k.webp" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BorkatRace - Formula 1 Hub" />
+    <meta name="twitter:description" content="Explore live Formula 1 driver lineups, team radio coms, circuit telemetry, and breaking news." />
+    <meta name="twitter:image" content="IMG/redbull-racing-4k.webp" />
+
+    <link rel="icon" type="image/png" href="IMG/f1_75-removebg-preview.png" />
     <title>Home - BorkatRace</title>
-    <link rel="stylesheet" href="CSS/style-one.css">
-    <link rel="stylesheet" href="CSS/style-responsive.css">
+    <link rel="stylesheet" href="CSS/style-one.css" />
+    <link rel="stylesheet" href="CSS/style-responsive.css" />
   </head>
   <body>
     <!-- Site Header with Decoupled Mobile Sidebar -->
@@ -67,7 +82,7 @@
         <div class="video1">
           <h2 class="judul-bawah">Formula One The Pinnacle Of Motorsport</h2>
           <div class="foto">
-            <img src="IMG/redbull-racing-4k.webp" alt="Red Bull Racing F1 Car" />
+            <img src="IMG/redbull-racing-4k.webp" alt="Red Bull Racing F1 Car" loading="lazy" />
           </div>
           <p class="pertama">
             Formula One is the pinnacle of auto racing, a place where speed, technology and human skill meet in thrilling harmony. It is not only a symbol of luxury and prestige, but also a testing ground for the world's most advanced
@@ -79,10 +94,16 @@
             world follow each season with incredible enthusiasm, making Formula One an unrivaled global spectacle. It's a world where the limits of man and machine are constantly being pushed beyond imagination. In Formula One, every second
             is a heartbeat, and every race writes its own legend.
           </p>
-          <video class="video-bg" autoplay muted loop playsinline preload="metadata">
-            <source src="IMG/zzz-zzz.mp4" type="video/mp4" />
-            Browser Anda tidak mendukung video.
-          </video>
+          
+          <!-- Optimized Lazy Video with Poster & IntersectionObserver -->
+          <div class="video-wrapper">
+            <video class="video-bg lazy-f1-video" muted loop playsinline preload="none" poster="IMG/redbull-racing-4k.webp">
+              <source data-src="IMG/zzz-zzz.mp4" type="video/mp4" />
+              Browser Anda tidak mendukung video HTML5.
+            </video>
+            <button class="video-play-toggle-btn" id="video-play-toggle" aria-label="Toggle video playback">▶</button>
+          </div>
+
           <p class="ketiga">
             Formula One isn't just about who's the fastest, it's about the struggles behind the scenes - the engineers who pull all-nighters to perfect their cars, the pit crews who work by the second, and the teams who bet everything on a
             single victory. Every season is full of surprises: sudden showers, dramatic crashes, and incredible moments created by reckless daring at the last corner. From the legendary Monaco circuit to the sparkling Singapore night track,
@@ -91,6 +112,9 @@
         </div>
       </section>
     </main>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top">↑</button>
 
     <footer class="footer-element">
       <p>&copy; 2003-2025 Formula One World Championship Limited. All rights reserved.</p>

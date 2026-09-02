@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Official Formula 1 Drivers roster, live team radio audio communications, track weather conditions, and racing profiles powered by OpenF1 live data." />
+    <meta name="theme-color" content="#0b1114" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Formula 1 Drivers & Live Telemetry Hub - BorkatRace" />
+    <meta property="og:description" content="Explore live Formula 1 driver lineups, team radio coms, circuit telemetry, and racing statistics." />
+    <meta property="og:image" content="../IMG/driver.webp" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Formula 1 Drivers - BorkatRace" />
+    <meta name="twitter:description" content="Explore live Formula 1 driver lineups, team radio coms, circuit telemetry, and racing statistics." />
+    <meta name="twitter:image" content="../IMG/driver.webp" />
+
+    <link rel="icon" type="image/png" href="../IMG/f1_75-removebg-preview.png" />
     <title>F1 Drivers & Live Telemetry Hub - BorkatRace</title>
     <link rel="stylesheet" href="../CSS/style-one.css" />
     <link rel="stylesheet" href="../CSS/style-second.css" />
@@ -101,12 +116,18 @@
             <div id="drivers-grid" class="drivers-grid" style="display: none;"></div>
           </div>
 
-          <!-- Legacy / Table view for compatibility -->
+          <!-- Driver Full Classification Table with Scroll Container -->
           <div class="cover-table" id="table-wrapper" style="display: none;">
-            <table class="driver-table">
-              <thead class="table-head"></thead>
-              <tbody class="table-body"></tbody>
-            </table>
+            <div class="table-section-header">
+              <h3 class="table-section-title">📋 Official Team & Driver Lineup Table</h3>
+              
+            </div>
+            <div class="table-scroll-container">
+              <table class="driver-table">
+                <thead class="table-head"></thead>
+                <tbody class="table-body"></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -171,6 +192,9 @@
         </section>
       </article>
     </main>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top">↑</button>
 
     <footer class="footer-element">
       <p>&copy; 2003-2025 Formula One World Championship Limited. All rights reserved.</p>
